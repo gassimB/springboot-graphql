@@ -1,12 +1,12 @@
-# Spring boot & GrapgQL
+# Spring boot & GraphQL
 
 Depuis [Spring.io](https://start.spring.io/) créer un projet Spring.
 
 Choisir comme dépendances :
 
-- MySQL Driver
-- Spring Web
-- Spring Data JPA ou JDBC
+- MySQL Driver (si MySQL)
+- Spring-boot-starter-web
+- Spring-boot-starter-data-jpa ou JDBC
 - Spring-boot-starter-graphql
 
 
@@ -44,7 +44,7 @@ public Optional<List<User>> getAllUsers() {
     return userService.getAllUsers();
  }
 ````
-
+### L'interface graphQL : (choisir le bon port)
 http://localhost:8090/graphiql?path=/graphql
 
 ### Ci-dessous un exemple de requete GraphQL
