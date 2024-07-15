@@ -4,19 +4,19 @@ pipeline {
 
     stage('build') {
       steps {
-        bat 'mvn package" '
+        bat 'mvn package'
       }
     }
 
     stage('test') {
       steps {
-        bat 'echo "l\'étape de test" '
+        bat 'mvn test'
       }
     }
 
     stage('deploy') {
       steps {
-        bat 'echo "l\'étape de deploy" '
+        bat 'mvn install'
       }
     }
   }
