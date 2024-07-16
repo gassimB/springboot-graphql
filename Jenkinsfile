@@ -19,5 +19,20 @@ pipeline {
         bat 'mvn install'
       }
     }
+
+  }
+
+  post {
+        always {
+            bat 'echo "Pipeline completed"'
+        }
+
+        success {
+            bat 'echo "Pipeline completed with success "'
+        }
+
+        failure {
+            bat 'echo "Pipeline Failed"'
+        }
   }
 }
